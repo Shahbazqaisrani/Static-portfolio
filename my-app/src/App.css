@@ -36,3 +36,69 @@
     transform: rotate(360deg);
   }
 }
+
+/* Navbar css is here*/
+.navbar{
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: black !important;
+  
+  }
+  
+  .navbar-brand{
+      font-size: 2rem;
+      color: aliceblue !important;
+      font-weight: bold;
+  }
+  #navbarSupportedContent a{
+      position: relative;
+      color: aliceblue;
+  }
+  #navbarSupportedContent a:hover{
+      color: aqua;
+  }
+  
+  
+  #navbarSupportedContent a{
+      position: relative;
+      font-weight: bold;
+      color:aliceblue;
+      text-decoration: none;
+  
+  }
+  #navbarSupportedContent a:before{
+  content:"";
+  position: absolute;
+  bottom: 0px;
+  height: 3px;
+  width: 0;
+  background: aqua;
+  border-radius: 50px;      
+  transition: width 0.3s ease;
+  }
+  #navbarSupportedContent a:hover::before{
+      width: 80%;
+  }
+     
+  .active{
+      font-weight: bold;
+      color: aqua !important ;
+  }
+
+
+        /* Css of Home display  */
+        .bghome{
+          background-image:url(./Images/about\ background1.png);
+          width: 100%;
+          height: 100vh;
+           background-size: cover;
+          font-family: 'Roboto Condensed', sans-serif;
+      }
+      .heading{
+          height: 100vh;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      
+      }
+      
