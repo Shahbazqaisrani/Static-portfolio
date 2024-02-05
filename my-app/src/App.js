@@ -1,6 +1,9 @@
 import "./App.css";
 import React, { useState } from "react";
 import img from "./Images/aboutimage.png";
+import petim from './Images/Petkeen.png'
+import holgicim from './Images/holgicim.png'
+import sknm from './Images/skinnymixes.png'
 
 function App() {
   // eslint-disable-next-line{/*User state for the show tab for home about of portfolio */}
@@ -12,15 +15,16 @@ function App() {
 
   return (
     <>
+    
       {/*This is navbar of my website */}
 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid col-10 mx-auto">
-          <a class="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid col-10 mx-auto">
+          <a className="navbar-brand" href="/">
             Navbar
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -28,28 +32,28 @@ function App() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="/">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link " aria-current="page" href="/">
                   Home
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="/">
+              <li className="nav-item">
+                <a className="nav-link " aria-current="page" href="/">
                   About
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="/">
+              <li className="nav-item">
+                <a className="nav-link " aria-current="page" href="/">
                   Services
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
                   Projects
                 </a>
               </li>
@@ -100,10 +104,10 @@ function App() {
                 {/*Pills tab for the about contants */}
                 <div id="aboutlinks">
 
-                <ul class="nav nav-pills" id="aboutpills">
-                  <li class="nav-item"   id="aboutbtns">
+                <ul className="nav nav-pills" id="aboutpills">
+                  <li className="nav-item"   id="aboutbtns">
                     <a
-                      class={showTab === 1 ? "nav-link active" : "nav-link"}
+                      className={showTab === 1 ? "nav-link active" : "nav-link"}
                     
                       onClick={() => homeabotclick(1)}
                       data-target="Pills-tab"
@@ -113,9 +117,9 @@ function App() {
                       Skills
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a
-                      class={showTab === 2 ? "nav-link active" : "nav-link"}
+                      className={showTab === 2 ? "nav-link active" : "nav-link"}
                       onClick={() => homeabotclick(2)}
                       data-target="Pills-tab"
                       href="#profile"
@@ -123,9 +127,9 @@ function App() {
                       Experience
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a
-                      class={showTab === 3 ? "nav-link active" : "nav-link"}
+                      className={showTab === 3 ? "nav-link active" : "nav-link"}
                       onClick={() => homeabotclick(3)}
                       data-target="Pills-tab"
                       href="#messages"
@@ -136,9 +140,9 @@ function App() {
                 </ul>
                 {/* tab content for that tabs */}
 
-                <div class="tab-content">
+                <div className="tab-content mx-3">
                   <div
-                    class={
+                    className={
                       showTab === 1
                         ? "tab-pane fade show active"
                         : "tab-pane fade show"
@@ -146,20 +150,20 @@ function App() {
                     id="home"
                     role="tabpanel"
                     aria-labelledby="home-tab"
-                    tabindex="0"
+                    tabIndex="0"
                   >
                     <h4>Skills</h4>
-                    <p>
+                    
                       <ul>
                         <li>React js</li>
                         <li>WordPress</li>
                         <li>Mern Stack</li>
                        
                       </ul>
-                    </p>
+                    
                   </div>
                   <div
-                    class={
+                    className={
                       showTab === 2
                         ? "tab-pane fade show active"
                         : "tab-pane fade show"
@@ -167,20 +171,20 @@ function App() {
                     id="experience"
                     role="tabpanel"
                     aria-labelledby="profile-tab"
-                    tabindex="0"
+                    tabIndex="0"
                   >
             
                    <h4>Experience</h4>
-                   <p>
+                   
                     <ul>
                       <li>As an intern for 3 mont</li>
                       <li>Developer two wordpress website for a client</li>
                       
                     </ul>
-                   </p>
+                   
                   </div>
                   <div
-                    class={
+                    className={
                       showTab === 3
                         ? "tab-pane fade show active"
                         : "tab-pane fade show"
@@ -188,16 +192,16 @@ function App() {
                     id="messages"
                     role="tabpanel"
                     aria-labelledby="messages-tab"
-                    tabindex="0"
+                    tabIndex="0"
                   >
                    <h4>Education</h4>
-                   <p>
+                   
                     <ul>
                       <li>NFTP UE lahore</li>
                       <li>Udemy</li>
                       <li>Web development for beginner book</li>
                     </ul>
-                   </p>
+                   
                   </div>
                   </div>
                 </div>
@@ -216,40 +220,31 @@ function App() {
   
     <div className="row">
   
-    <div class="scard">
-      <p class="scard-title">Product Name</p>
-      <p class="small-desc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
-        veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
-        officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
-        eum nihil itaque!
+    <div className="scard">
+      <p className="scard-title">Webdevelopement</p>
+      <p className="small-desc">
+       I'm a front-end developer. I can design any king of website from figma, canva, photoshop design to react code. I can also convert psd to html
       </p>
-      <div class="go-corner">
-        <div class="go-arrow"></div>
+      <div className="go-corner">
+        <div className="go-arrow"></div>
       </div>
     </div>
-    <div class="scard">
-      <p class="scard-title">Product Name</p>
-      <p class="small-desc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
-        veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
-        officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
-        eum nihil itaque!
+    <div className="scard">
+      <p className="scard-title">Web design</p>
+      <p className="small-desc">
+       I can design any kind of website by using wordpress and I have expertise in this. I also have converted many design of figma to wordpress
       </p>
-      <div class="go-corner">
-        <div class="go-arrow"></div>
+      <div className="go-corner">
+        <div className="go-arrow"></div>
       </div>
     </div>
-    <div class="scard">
-      <p class="scard-title">Product Name</p>
-      <p class="small-desc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
-        veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
-        officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
-        eum nihil itaque!
+    <div className="scard">
+      <p className="scard-title">Seo</p>
+      <p className="small-desc">
+      I can also do the seo of the website and can also build the seo friendly website
       </p>
-      <div class="go-corner">
-        <div class="go-arrow"></div>
+      <div className="go-corner">
+        <div className="go-arrow"></div>
       </div>
     </div>
 
@@ -257,6 +252,140 @@ function App() {
   </div>
   </div>
   </div>
+                         {/*My expertiese cod is here */}
+     <div className="bghomexperties pb-5">
+     <div className="col-10 mx-auto">
+        <h1>Experties</h1>
+        <div className="row">
+        {/*My expertiese card is here */}
+
+     <div className="expcard mx-1">
+             <p className="c-txt">HTML <br />CSS</p>
+      </div>
+     <div className="expcard mx-1">
+             <p className="c-txt">JAVA Script <br />jQuery</p>
+      </div>
+     <div className="expcard mx-1">
+             <p className="c-txt">WordPress <br />Elementor <br /> SEO</p>
+      </div>
+     <div className="expcard mx-1">
+             <p className="c-txt">React JS</p>
+      </div>
+     <div className="expcard mx-1">
+             <p className="c-txt">MERN Stack</p>
+      </div>
+ 
+
+  </div>
+  </div>
+  </div>
+
+
+            {/*My experience work code from here */}
+              
+       <div className="bgexperience pb-5">
+      <div className="col-10 mx-auto">
+       
+          <h1>Experience</h1>
+          {/*Experience card is here */}
+
+        <div className="row">
+
+        <div className="card-container mx-1">
+  <div className="card">
+  <div className="img-content">
+  <img src={petim} className="card-img-top" alt="..."/>
+  </div>
+  <div className="content">
+    <p className="heading">Petkeen</p>
+    <p>
+    I developed this website for a client of autaralia using WordPress
+    </p>
+    <a href="/" className="btn btn-primary">Visit website</a>
+  </div>
+</div>
+</div>
+        <div className="card-container mx-1">
+  <div className="card">
+  <div className="img-content">
+  <img src={holgicim} className="card-img-top" alt="..."/>
+  </div>
+  <div className="content">
+    <p className="heading">Holgics</p>
+    <p>
+    I developed this website for a client. You can also visit this website
+    </p>
+    <a href="/" className="btn btn-primary">Visit website</a>
+  </div>
+</div>
+</div>
+
+        <div className="card-container mx-1">
+  <div className="card">
+  <div className="img-content">
+    <img src={sknm} className="card-img-top" alt="..."/>
+  </div>
+  <div className="content">
+    <p className="heading">Skinnymixes</p>
+    <p>
+    I developed the exact copy of this website for a client
+    </p>
+    <a href="/" className="btn btn-primary">Visit website</a>
+  </div>
+</div>
+</div>
+       </div>
+
+          
+    </div>
+    </div>
+
+    {/*My footer code start from here */}
+
+    <div className="bgfooter">
+        <div className="col-10 mx-auto">
+          <div className="row">
+           <div className="contact col-lg-4 col-md-6">
+            <h1 className='pb-3'>Contact ME</h1>
+            <div className="phtl" id='phtl'>
+                    <i className="fa-brands fa-telegram fa-2x"></i> <p className='pt-2'> +923433085528</p><br />
+            </div>
+            <div className="phtl" id='phtl'>
+            <i className="fa-solid fa-phone fa-2x"> </i><p className='pt-1'> +923176734489</p>
+            </div>
+            <div className="iconssmedia" id='smediaicons'>
+
+<a href="https://www.facebook.com/muhammadshahbaz.muhammadshahbaz.925/" rel="noreferrer" target="_blank"> <i className="fa-brands fa-2x fa-facebook-f"></i></a>
+<a href="https://www.linkedin.com/in/web-developer-front-end-exper/"  rel="noreferrer" target="_blank"> <i className="fa-brands fa-2x fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/shahbazsharif706/" rel="noreferrer" target="_blank"><i className="fa-brands fa-2x fa-instagram" rel="noreferrer" target="_blank"></i></a>
+<a href="https://twitter.com/Shahbaz52390668/" rel="noreferrer" target="_blank"> <i className="fa-brands fa-2x fa-x-twitter" ></i></a>
+<a href="https://wa.me/+923433085528" rel="noreferrer" target="_blank"><i className="fa-brands fa-2x fa-whatsapp"></i></a>
+
+</div>
+           </div>
+
+           <div className="contform col-lg-8 col-md-6">
+           <div className="form-container">
+      <form className="form">
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input required="" name="email" id="email" type="text"/>
+        </div>
+        <div className="form-group">
+          <label labelfor="textarea">How Can We Help You?</label>
+          <textarea required="" cols="50" rows="10" id="textarea" name="textarea"></textarea>
+        </div>
+        <button type="submit" className="form-submit-btn">Submit</button>
+      </form>
+    </div>
+           </div>
+           
+           </div>
+
+          
+        </div>    
+   </div>
+    
 
     </>
   );
